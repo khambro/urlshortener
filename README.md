@@ -1,5 +1,10 @@
 # urlshortener
 
+This Url Shortener application is built using:
+* Node/Express
+* React
+* Bootstrap
+
 To run the url shortener locally, please run the following commands:
 
 ```git clone git@github.com:khambro/urlshortener.git```
