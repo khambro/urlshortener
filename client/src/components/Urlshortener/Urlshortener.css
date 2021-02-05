@@ -1,11 +1,4 @@
-.errors {
-    color: #FF3370;
-    background-color: #FFBABA;
-    border: 1px solid;
-    padding: 1rem 1rem 1rem 3rem;
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    border-radius: 8px;
+.error {
     margin: 2rem;
 }
 

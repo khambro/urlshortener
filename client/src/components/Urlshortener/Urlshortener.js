@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import axios from "axios";
 import './Urlshortener.css'
+import Alert from 'react-bootstrap/Alert';
 
 
 const Urlshortener= (props) => {
@@ -66,9 +67,9 @@ const Urlshortener= (props) => {
           name="url" value={url}
           onChange={clearformhandler}/>
         <input id="shorten_btn" type="submit" value="Shorten" onClick={handleSubmit} />
-        {errors && <div className='errors'>
-            <p>{errors}</p>
-        </div> }
+        {errors && <Alert className="error" variant="danger">
+          {errors}
+        </Alert> }
         {shortUrl && <div className="success">
             <p>{originalUrl} has been shortened to:
               <div className="noborder"><textarea className="copy"

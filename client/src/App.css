@@ -1,7 +1,7 @@
-.body {
+body {
   font-family: 'Lato', sans-serif;
+  background-color: #3370FF;
 }
-
 
 .App {
   text-align: center;
@@ -9,15 +9,10 @@
 
 .shorten {
   padding: 0rem 0rem 2rem 0rem;
-
 }
 
-
 .URLform {
-  background-color: #3370FF;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin: 10rem 2rem 5rem 2rem;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
