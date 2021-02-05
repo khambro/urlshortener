@@ -2,7 +2,8 @@ import React, { useState, useRef } from "react";
 import axios from "axios";
 import './Urlshortener.css'
 import Alert from 'react-bootstrap/Alert';
-
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 const Urlshortener= (props) => {
   const [url, setUrl] = useState();
@@ -62,12 +63,16 @@ const Urlshortener= (props) => {
   return (
     <div style={style}>
     <h1 className="shorten">Shorten your URL!</h1>
-    <form className="noborder">
-        <input id="urlinput" type="text" placeholder="type URL to shorten"
-          name="url" value={url}
-          onChange={clearformhandler}/>
-        <input id="shorten_btn" type="submit" value="Shorten" onClick={handleSubmit} />
-        {errors && <Alert className="error" variant="danger">
+    <Form inline>
+      <Form.Group controlId="formInput" >
+        <Form.Control type="text" placeholder="type URL to shorten"
+              name="url" value={url}
+              onChange={clearformhandler} />
+        <Button variant="info" type="submit"
+          onClick={handleSubmit}>Shorten</Button>
+      </Form.Group>
+    </Form>
+    {errors && <Alert className="error" variant="danger">
           {errors}
         </Alert> }
         {shortUrl && <div className="success">
@@ -80,9 +85,7 @@ const Urlshortener= (props) => {
               </div>
             </p>
         </div> }
-    </form>
     </div>
   );
 }
-
 export default Urlshortener;
