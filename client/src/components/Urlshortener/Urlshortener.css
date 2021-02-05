@@ -1,0 +1,50 @@
+.errors {
+    color: #FF3370;
+    background-color: #FFBABA;
+    border: 1px solid;
+    padding: 15px 15px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    border-radius: 8px;
+    margin: 2rem;
+}
+
+.success {
+    color: #008000;
+    background-color: #00FF00;
+    border: 1px solid;
+    margin: 2rem;
+    padding: 15px 15px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    border-radius: 8px;
+}
+
+#shorten_btn {
+    color: #333333;
+    background-color: #33FFC2;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    padding: .5rem;
+}
+
+#urlinput {
+    color: #333333;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: .3rem;
+}
+
+#urlinput::placeholder {
+    color: #333333;
+    font-size: 1.25rem;
+    padding: 0rem 0rem .5rem 1rem;
+}
+
+.copy {
+    cursor: copy;
+}
+
+.noborder {
+    border: none;
+}
