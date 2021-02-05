@@ -1,16 +1,18 @@
+import React from "react";
 import './App.css';
-import  Urlshortener from './components/Urlshortener/Urlshortener'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import  Urlshortener from './components/Urlshortener/Urlshortener';
 
 function App() {
 
   return (
+    <Router>
     <div className="App">
       <div className="URLform">
-        <h1 className="shorten">Shorten your URL!</h1>
-        <Urlshortener />
+        <Route exact path="/" component={Urlshortener} />
       </div>
-
     </div>
+    </Router>
   );
 }
 

@@ -60,6 +60,7 @@ const Urlshortener= (props) => {
 
   return (
     <div style={style}>
+    <h1 className="shorten">Shorten your URL!</h1>
     <form className="noborder">
         <input id="urlinput" type="text" placeholder="type URL to shorten"
           name="url" value={url}

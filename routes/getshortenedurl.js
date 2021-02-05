@@ -4,8 +4,6 @@ const config = require("config");
 const Url = require("../models/url");
 var getShortenedUrlRoute = express.Router();
 
-getShortenedUrlRoute.get('/blah', (req, res) => {res.json({msg: "get route is twerking"})})
-
 getShortenedUrlRoute.get('/:shortUrl', async (req, res) => {
     var shortUrlCode = req.params.shortUrl;
     var url = await Url.findOne({ urlCode: shortUrlCode });
