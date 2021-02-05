@@ -2,7 +2,7 @@
     color: #FF3370;
     background-color: #FFBABA;
     border: 1px solid;
-    padding: 15px 15px 15px 50px;
+    padding: 1rem 1rem 1rem 3rem;
     background-repeat: no-repeat;
     background-position: 10px center;
     border-radius: 8px;
@@ -10,11 +10,12 @@
 }
 
 .success {
-    color: #008000;
-    background-color: #00FF00;
+    color: #333333;
+    background-color: #E5EDFF;
+    font-size: 1rem;
     border: 1px solid;
     margin: 2rem;
-    padding: 15px 15px 15px 50px;
+    padding: 2rem 2rem 1rem 2rem;
     background-repeat: no-repeat;
     background-position: 10px center;
     border-radius: 8px;
@@ -41,10 +42,22 @@
     padding: 0rem 0rem .5rem 1rem;
 }
 
-.copy {
-    cursor: copy;
-}
-
 .noborder {
     border: none;
+}
+
+.copy {
+    border: none;
+    color: #333333;
+    background-color: #E5EDFF;
+    font-size: 1.5rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.copy:hover{
+    color: grey;
 }

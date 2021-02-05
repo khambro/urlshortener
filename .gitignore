@@ -8,6 +8,7 @@ package-lock.json
 # /config/default.js
 /client/node_modules
 /client/package-lock.json
+/client/.eslintcache
 
 # testing
 /coverage

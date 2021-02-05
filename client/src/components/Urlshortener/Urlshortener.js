@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 import './Urlshortener.css'
 
@@ -8,6 +8,8 @@ const Urlshortener= (props) => {
   const [shortUrl, setShortUrl] = useState('');
   const [originalUrl, setOriginalUrl] = useState('');
   const [errors, setErrors] = useState()
+  const [copySuccess, setCopySuccess] = useState('');
+  const textAreaRef = useRef(null);
 
   const style = {
     '@media (min-width: 500px)': {
@@ -18,6 +20,7 @@ const Urlshortener= (props) => {
 
   const handleSubmit = (e) => {
       e.preventDefault();
+      setShortUrl("");
       setOriginalUrl(url)
       let validurl = ''
       if (url){
@@ -43,6 +46,15 @@ const Urlshortener= (props) => {
     setUrl(e.target.value);
     setShortUrl("");
     setErrors("");
+    setOriginalUrl("");
+    setCopySuccess("");
+  }
+
+  const copyToClipboard = (e) => {
+    textAreaRef.current.select();
+    document.execCommand('copy');
+    e.target.focus();
+    setCopySuccess('Copied!');
   }
 
 
@@ -57,7 +69,14 @@ const Urlshortener= (props) => {
             <p>{errors}</p>
         </div> }
         {shortUrl && <div className="success">
-            <p>{originalUrl} has been shortened to <a className="copy"href={shortUrl}>{shortUrl}</a></p>
+            <p>{originalUrl} has been shortened to:
+              <div className="noborder"><textarea className="copy"
+                ref={textAreaRef}
+                value={shortUrl}
+                onClick={copyToClipboard}/>
+                {copySuccess}
+              </div>
+            </p>
         </div> }
     </form>
     </div>
