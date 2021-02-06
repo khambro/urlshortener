@@ -62,29 +62,29 @@ const Urlshortener= (props) => {
 
   return (
     <div style={style}>
-    <h1 className="shorten">Shorten your URL!</h1>
-    <Form inline>
-      <Form.Group controlId="formInput" >
-        <Form.Control type="text" placeholder="type URL to shorten"
-              name="url" value={url}
-              onChange={clearformhandler} />
-        <Button variant="info" type="submit"
-          onClick={handleSubmit}>Shorten</Button>
-      </Form.Group>
-    </Form>
-    {errors && <Alert className="error" variant="danger">
-          {errors}
-        </Alert> }
-        {shortUrl && <div className="success">
-            <p>{originalUrl} has been shortened to:
-              <div className="noborder"><textarea className="copy"
-                ref={textAreaRef}
-                value={shortUrl}
-                onClick={copyToClipboard}/>
-                {copySuccess}
-              </div>
-            </p>
-        </div> }
+      <h1 className="shorten">Shorten your URL!</h1>
+      <Form inline>
+        <Form.Group controlId="formInput" >
+          <Form.Control type="text" placeholder="type URL to shorten"
+                name="url" value={url}
+                onChange={clearformhandler} />
+          <Button variant="info" type="submit"
+            onClick={handleSubmit}>Shorten</Button>
+        </Form.Group>
+      </Form>
+      {errors && <Alert className="error" variant="danger">
+            {errors}
+      </Alert> }
+      {shortUrl && <div className="success">
+          <p>{originalUrl} has been shortened to:
+            <div className="noborder"><textarea className="copy"
+              ref={textAreaRef}
+              value={shortUrl}
+              onClick={copyToClipboard}/>
+              {copySuccess}
+            </div>
+          </p>
+      </div> }
     </div>
   );
 }
