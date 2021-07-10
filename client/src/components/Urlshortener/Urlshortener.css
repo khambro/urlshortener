@@ -48,3 +48,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.result {
+    overflow-wrap: break-word;
+}

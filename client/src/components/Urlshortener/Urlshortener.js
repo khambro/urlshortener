@@ -76,7 +76,7 @@ const Urlshortener= (props) => {
             {errors}
       </Alert> }
       {shortUrl && <div className="success">
-          <p>{originalUrl} has been shortened to:
+          <p className="result">{originalUrl} has been shortened to:
             <div className="noborder"><textarea className="copy"
               ref={textAreaRef}
               value={shortUrl}
